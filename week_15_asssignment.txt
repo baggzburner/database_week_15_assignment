@@ -1,0 +1,28 @@
+Challenges:
+- there were no challenges importing netflix_titles to mysql workbench.
+
+Database Queries
+SELECT * FROM netflix_titles where duration="90 min";
+
+select description from netflix_titles where show_id="s1";
+
+UPDATE netflix_titles
+SET duration = '180 min'
+WHERE show_id = 's3';
+
+-- Total number of titles
+SELECT COUNT(*) FROM netflix_titles;
+
+-- Average duration of titles
+SELECT AVG(duration) FROM netflix_titles;
+
+-- Sum of all durations
+SELECT SUM(duration) FROM netflix_titles;
+
+
+SELECT country, COUNT(*) FROM netflix_titles GROUP BY country ORDER BY COUNT(*) DESC;
+
+i leant that united states has the most movies on netflix
+
+SELECT show_id, description, rating FROM netflix_titles WHERE rating IS NOT NULL ORDER BY rating DESC;
+
